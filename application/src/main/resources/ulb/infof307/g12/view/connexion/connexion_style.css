@@ -1,0 +1,19 @@
+.root {
+    -fx-background-color: #ffffe6;
+}
+
+#titre{
+    -fx-font-size: 45px;
+}
+
+.button{
+    -fx-background-color: #f3f3db ;
+}
+
+.button:pressed {
+    -fx-background-color: #FFDAB9;
+}
+
+.button:hover {
+    -fx-background-color: #efefd8;
+}

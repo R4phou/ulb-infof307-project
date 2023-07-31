@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ulb.infof307.g12</groupId>
+        <artifactId>Projet_gestion_projet</artifactId>
+        <version>4.0-RELEASE</version>
+    </parent>
+
+    <artifactId>application</artifactId>
+    <name>application</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <mainClass>ulb.infof307.g12.Main</mainClass>
+    </properties>
+
+    <dependencies>
+        <!-- JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>19.0.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>19.0.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>11.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>19.0.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.kordamp.bootstrapfx</groupId>
+            <artifactId>bootstrapfx-core</artifactId>
+            <version>0.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scilab.forge</groupId>
+            <artifactId>jlatexmath</artifactId>
+            <version>1.0.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>16</version>
+        </dependency>
+
+        <!-- FreeTTS -->
+        <dependency>
+            <groupId>com.sun.speech</groupId>
+            <artifactId>freetts</artifactId>
+            <version>1.2.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/freetts-1.2.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>ulb.infof307.g12</groupId>
+            <artifactId>server</artifactId>
+            <version>4.0-RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <executions>
+                    <execution>
+                        <!-- Default configuration for running with: mvn clean javafx:run -->
+                        <id>default-cli</id>
+                        <configuration>
+                            <mainClass>ulb.infof307.g12.controller.javafx.connexion.MenuPrincipal</mainClass>
+                            <launcher>app</launcher>
+                            <jlinkZipName>app</jlinkZipName>
+                            <jlinkImageName>app</jlinkImageName>
+                            <noManPages>true</noManPages>
+                            <stripDebug>true</stripDebug>
+                            <noHeaderFiles>true</noHeaderFiles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

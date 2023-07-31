@@ -1,0 +1,46 @@
+.root {
+    -fx-background-color: #ffffe6;
+}
+
+#titre{
+    -fx-font-size: 45px;
+}
+
+.button{
+    -fx-background-color: #f3f3db ;
+}
+
+#carte{
+    -fx-background-color: #f3f3db ;
+    -fx-border-color: #dadac5 ;
+    -fx-border-width: 3px;
+}
+
+#boutonJouer{
+    -fx-font-size: 17px
+}
+
+.button:pressed {
+    -fx-background-color: #FFDAB9;
+}
+
+.button:hover {
+    -fx-background-color: #efefd8;
+}
+
+#boutonJouer:hover {
+    -fx-background-color: #FFDAB9;
+    -fx-font-size: 21px;
+    -fx-pref-height: 52px;
+    -fx-pref-width: 85px;
+}
+
+.boutonConnaissance:hover {
+    -fx-pref-height: 27px;
+    -fx-pref-width: 120px;
+    -fx-background-color: #d7d7bc;
+}
+
+.boutonConnaissance:pressed {
+    -fx-background-color: #FFDAB9;
+}
